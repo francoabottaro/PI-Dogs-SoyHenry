@@ -20,11 +20,21 @@ module.exports = sequelize => {
 				allowNull: false
 			},
 			height: {
-				type: DataTypes.STRING,
+				// format
+				// xx - xx
+				type: DataTypes.STRING(7),
+				allowNull: false
+			},
+			weight: {
+				// format
+				// xxx - xxx
+				type: DataTypes.STRING(9),
 				allowNull: false
 			},
 			life_span: {
-				type: DataTypes.STRING,
+				// format
+				// xx - xx years
+				type: DataTypes.STRING(13),
 				allowNull: false
 			}
 		},
