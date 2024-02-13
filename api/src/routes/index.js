@@ -1,12 +1,14 @@
-const { Router } = require('express');
-// Importar todos los routers;
-// Ejemplo: const authRouter = require('./auth.js');
+const { Router } = require("express");
+const api = require("../Middleware/api");
+const dataBase = require("../Middleware/dataBase");
 
+// Importar todos los routers;
 
 const router = Router();
 
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
-
+// API Extraction
+router.use(api);
+// DataBase Extraction
+router.use(dataBase);
 
 module.exports = router;

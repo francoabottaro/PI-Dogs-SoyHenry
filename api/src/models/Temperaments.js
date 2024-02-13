@@ -5,8 +5,7 @@ module.exports = sequelize => {
 		"Temperaments",
 		{
 			id: {
-				type: DataTypes.INTEGER,
-				autoIncrement: true,
+				type: DataTypes.UUID,
 				primaryKey: true
 			},
 			name: {
