@@ -1,4 +1,5 @@
 const { DataTypes } = require("sequelize");
+const validator = require("validator");
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 module.exports = sequelize => {
@@ -10,13 +11,19 @@ module.exports = sequelize => {
 				type: DataTypes.UUID,
 				primaryKey: true
 			},
-			image: {
-				type: DataTypes.STRING,
-				allowNull: false
-			},
 			name: {
 				type: DataTypes.STRING,
 				allowNull: false
+			},
+			image: {
+				type: DataTypes.STRING,
+				allowNull: false,
+				validate: {
+					isUrl: {
+						args: true,
+						msg: "URL invalid"
+					}
+				}
 			},
 			height: {
 				// format

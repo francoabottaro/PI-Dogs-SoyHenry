@@ -4,6 +4,7 @@ const axios = require("axios");
 
 const api = async (req, res, next) => {
 	try {
+		// API consumption
 		const dogsApi = await axios.get(`${API}?api_key=${API_KEY}`);
 		const resDogs = dogsApi.data.map(e => ({
 			id: e.id,

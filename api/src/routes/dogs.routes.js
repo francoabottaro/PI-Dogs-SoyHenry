@@ -7,9 +7,8 @@ const postDogs = require("../controllers/postDogs");
 
 // HTTP Method
 const dogsRoutes = Router();
-
 dogsRoutes.get("/dogs", getDogs);
 dogsRoutes.get("/dogs/:idRaza", getIdRaza);
-dogsRoutes.post("/dogs");
+dogsRoutes.post("/dogs", postDogs);
 
 module.exports = dogsRoutes;
