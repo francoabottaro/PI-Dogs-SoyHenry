@@ -1,10 +1,8 @@
-// idRaza = name
+// idRaza = id
 const getIdRaza = (req, res) => {
 	try {
-		const idRaza = req.params.idRaza.toLowerCase();
-		const ApiIdRaza = req.dataApi.find(e =>
-			e.name.toLowerCase().includes(idRaza)
-		);
+		const idRaza = req.params.idRaza;
+		const ApiIdRaza = req.dataApi.find(e => e.id.toString() === idRaza);
 		res.json(ApiIdRaza);
 	} catch (error) {
 		console.log(error);

@@ -1,0 +1,3 @@
+// filter strings
+
+module.exports;
