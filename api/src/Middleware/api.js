@@ -12,6 +12,7 @@ const api = async (req, res, next) => {
 			image: e.image.url,
 			weight: e.weight.metric,
 			height: e.height.metric,
+			life_span: e.life_span,
 			temperament: e.temperament
 		}));
 		req.dataApi = resDogs;

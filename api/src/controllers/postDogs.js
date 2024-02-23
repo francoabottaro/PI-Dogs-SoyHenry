@@ -1,6 +1,6 @@
 const errorPost = require("../utils/error");
 const { Dogs, Temperaments, DogsTemperaments } = require("../db");
-const { v1: UUID } = require("uuid");
+const UUID = require("../utils/createId");
 const { Op } = require("sequelize");
 
 const postDogs = async (req, res) => {

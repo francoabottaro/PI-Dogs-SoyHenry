@@ -11,7 +11,8 @@ function errorPost(
 		errorNotNull: /([A-Z a-z])[\w\s]{1,90}/,
 		errorHeight: /(^\d{1,2}\s{1}-\s{1}\d{1,2}$)/,
 		errorWeight: /(^\d{1,3}\s{1}-\s{1}\d{1,3}$)/,
-		errorLifeSpan: /(^\d{1,2}\s{1}-\s{1}\d{1,2}$)/
+		errorLifeSpan: /(^\d{1,2}\s{1}-\s{1}\d{1,2}$)/,
+		errorLifeSpan1: /(^\d{1,2}$)/
 	};
 	try {
 		//temperament
@@ -41,7 +42,12 @@ function errorPost(
 			throw new Error("Error invalid weight");
 		}
 
-		if (!regex.errorLifeSpan.test(life_span)) {
+		if (
+			!(
+				regex.errorLifeSpan.test(life_span) ||
+				regex.errorLifeSpan1.test(life_span)
+			)
+		) {
 			throw new Error("Error invalid life_span");
 		}
 

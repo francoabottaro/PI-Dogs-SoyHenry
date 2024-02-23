@@ -1,0 +1,27 @@
+/*NavBar*/
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	padding: 9px 3vw;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.237);
+	filter: drop-shadow(0px 0px 2px #00000055);
+}
+.icon-dog img {
+	height: 5vh;
+}
+.nav-bar div {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.nav-bar div > a {
+	font-size: 2vh;
+	background-color: var(--background-color-buttom);
+	padding: 1vh 2vh;
+	border-radius: 1vh;
+}
+.nav-bar div > a:hover {
+	background-color: var(--background-color-buttom-hover);
+}

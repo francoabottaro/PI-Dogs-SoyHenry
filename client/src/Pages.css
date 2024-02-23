@@ -1,0 +1,53 @@
+/* Landing && Error*/
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2vw;
+}
+/* Error */
+
+.error-container a img {
+	width: 35vw;
+	border-radius: 5px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.error-container a img:hover {
+	opacity: 0.8;
+}
+
+/* Landing */
+.container-landing h1 {
+	font-size: 1.8vw;
+}
+.container-landing h1 span {
+	font-style: italic;
+	font-weight: 400;
+}
+.get-into a {
+	background-color: var(--background-color-buttom);
+	font-size: 1.5vw;
+	border-radius: 4px;
+	padding: 0.5em 1em;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.container-landing {
+	background-image: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.806),
+			rgba(0, 0, 0, 0)
+		),
+		url(./assets/dogLanding.png);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: -32vw;
+}
+.get-into a:hover {
+	background-color: var(--background-color-buttom-hover);
+}
+/*Home pages*/
+.active-dogs {
+	display: none;
+}

@@ -2,7 +2,9 @@
 const getIdRaza = (req, res) => {
 	try {
 		const idRaza = req.params.idRaza;
-		const ApiIdRaza = req.dataApi.find(e => e.id.toString() === idRaza);
+		const ApiIdRaza = req.dataApi.find(
+			e => e.id.toString() === idRaza.toString()
+		);
 		res.json(ApiIdRaza);
 	} catch (error) {
 		console.log(error);

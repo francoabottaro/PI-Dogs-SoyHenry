@@ -1,0 +1,41 @@
+/* var */
+:root {
+	--background-color: #242424;
+	--background-color-buttom: #313131;
+	--background-color-buttom-hover: #424242;
+	--font-color-global: white;
+	--font-color-span: #ffaa64;
+	--font-family: system-ui;
+}
+/* global */
+* {
+	color: var(--font-color-global);
+	font-family: var(--font-family);
+}
+span {
+	color: var(--font-color-span);
+}
+p,
+span,
+h1,
+h2,
+h3,
+div {
+	cursor: default;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+a {
+	text-decoration: none;
+}
+html,
+body,
+#root {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	background-color: var(--background-color);
+}
