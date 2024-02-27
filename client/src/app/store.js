@@ -1,13 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import dogSlice from './dogs/dogSlice' //type: array
-import dogsSlice from './dogs/dogsSlice' //type: object
+import dogsReducer from './features/dogs/dogsSlice'
+import dogReducer from './features/dogs/dogSlice'
 
 const store = configureStore({
 	reducer: {
-		dogSlice,
-		dogsSlice
+		dogs: dogsReducer,
+		dog: dogReducer
 	}
 })
-// dispach():
-// const API = import.meta.env.VITE_API
+
 export default store

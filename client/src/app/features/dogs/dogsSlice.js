@@ -1,13 +1,53 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const dogsSlice = createSlice({
+const initialState = {
+	allDogs: [],
+	idDog: {},
+	order: {
+		origin: '',
+		orderAlpha: '',
+		ordenWeight: '',
+		temperament: ''
+	},
+	temperaments: [],
+	isLoading: false
+}
+
+const dogsSlice = createSlice({
 	name: 'dogs',
-	initialState: [],
+	initialState,
 	reducers: {
-		GET_DOGS: (state, actions) => {
-			s
+		API_ALL_DOGS: (state, actions) => {
+			state.allDogs = actions.payload
+		},
+		API_TEMPERAMENTS: (state, actions) => {
+			state.temperaments = actions.payload
+		},
+		API_ID: (state, actions) => {
+			state.idDog = actions.payload
+		},
+		ORDER_ORIGIN: (state, actions) => {
+			state.order.origin = actions.payload
+		},
+		ORDER_APHE: (state, actions) => {
+			state.order.orderAlpha = actions.payload
+		},
+		ORDER_WEIGHT: (state, actions) => {
+			state.order.ordenWeight = actions.payload
+		},
+		ORDER_TEMPERAMENT: (state, actions) => {
+			state.order.temperament = actions.payload
 		}
 	}
 })
-export const {} = dogsSlice.actions
+
+export const {
+	API_ALL_DOGS,
+	API_TEMPERAMENTS,
+	API_ID,
+	ORDER_ORIGIN,
+	ORDER_APHE,
+	ORDER_WEIGHT,
+	ORDER_TEMPERAMENT
+} = dogsSlice.actions
 export default dogsSlice.reducer

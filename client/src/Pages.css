@@ -51,3 +51,10 @@
 .active-dogs {
 	display: none;
 }
+/* FormPages */
+input,
+button,
+select,
+option {
+	color: black;
+}
