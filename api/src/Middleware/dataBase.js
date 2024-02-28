@@ -12,8 +12,8 @@ const dataBase = async (req, res, next) => {
 		});
 		const dogsData = dogsFromDB.map(dog => {
 			const { id, name, image, height, weight, life_span, Temperaments } = dog;
-			const temperaments = Temperaments.map(temp => temp.name).join(", ");
-			return { id, name, image, height, weight, life_span, temperaments };
+			const temperament = Temperaments.map(temp => temp.name).join(", ");
+			return { id, name, image, height, weight, life_span, temperament };
 		});
 		// For GET
 		const ApiDataDogs = req.dataApi.concat(dogsData);

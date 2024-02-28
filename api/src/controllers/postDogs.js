@@ -5,8 +5,8 @@ const { Op } = require("sequelize");
 
 const postDogs = async (req, res) => {
 	try {
-		const { name, image, height, weight, life_span, temperaments } = req.body;
-		let temperamentsUnique = new Set(temperaments);
+		const { name, image, height, weight, life_span, temperament } = req.body;
+		let temperamentsUnique = new Set(temperament);
 		temperamentsUnique = Array.from(temperamentsUnique);
 		const valid = await errorPost(
 			name,
