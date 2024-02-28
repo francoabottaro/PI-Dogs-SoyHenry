@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import { DogStateQuery, DogState } from '../utils/ApiState'
 import { API_ALL_DOGS } from '../app/features/dogs/dogsSlice'
 import Order from '../components/Order'
+import '../Components.css'
 
 const HomePage = () => {
 	const dispatchDogsAll = useDispatch()
@@ -30,23 +31,25 @@ const HomePage = () => {
 	return (
 		<>
 			<NavBar />
+			<SearchBar
+				dispatchDogsAll={dispatchDogsAll}
+				API_ALL_DOGS={API_ALL_DOGS}
+				DogState={DogState}
+			/>
 			<Order
 				nameOrder={nameOrder}
 				temperament={temperament}
 				origin={origin}
 				weight={weight}
 			/>
-			<SearchBar
-				dispatchDogsAll={dispatchDogsAll}
-				API_ALL_DOGS={API_ALL_DOGS}
-				DogState={DogState}
-			/>
-			{dogs.map(e => (
-				<div key={e.id}>
-					<Card e={e} />
-					<Link to={`/dogs/${e.id}`}>Know more</Link>
-				</div>
-			))}
+			<div className='Cards'>
+				{dogs.map(e => (
+					<div key={e.id} className='Card'>
+						<Card e={e} />
+						<Link to={`/dogs/${e.id}`}>Know more</Link>
+					</div>
+				))}
+			</div>
 		</>
 	)
 }

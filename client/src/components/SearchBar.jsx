@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import '../Components.css'
 const SearchBar = ({ dispatchDogsAll, API_ALL_DOGS, DogState }) => {
 	const [searchTerm, setSearchTerm] = useState('')
 	const navigate = useNavigate()
@@ -23,7 +23,7 @@ const SearchBar = ({ dispatchDogsAll, API_ALL_DOGS, DogState }) => {
 		}
 	}
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className='search'>
 			<input
 				type='text'
 				placeholder='Search by name...'

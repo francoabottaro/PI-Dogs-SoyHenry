@@ -31,7 +31,7 @@
 	font-size: 1.5vw;
 	border-radius: 4px;
 	padding: 0.5em 1em;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 .container-landing {
 	background-image: linear-gradient(
@@ -57,4 +57,51 @@ button,
 select,
 option {
 	color: black;
+}
+
+/*Cards*/
+.Dog-card {
+	display: flex;
+	flex-direction: column;
+}
+.Card {
+	display: flex;
+	flex-direction: column;
+	background-color: #00000059;
+	gap: 5px;
+	padding: 2em 3em;
+	margin: 3em;
+	width: 25%;
+	height: 75vh;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.Card a {
+	display: flex;
+	background-color: var(--background-color-buttom);
+	width: fit-content;
+	margin: auto;
+	border-radius: 5px;
+	padding: 10px 20px;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.Card a:hover {
+	background-color: var(--background-color-buttom-hover);
+}
+.Dog-card img {
+	height: 40vh;
+}
+.Cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.number {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	gap: 10px;
+	justify-content: center;
 }

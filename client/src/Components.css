@@ -25,3 +25,191 @@
 .nav-bar div > a:hover {
 	background-color: var(--background-color-buttom-hover);
 }
+/*content*/
+.order-by {
+	display: flex;
+	width: fit-content;
+	margin: 1em auto;
+	gap: 1em;
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+}
+select,
+option {
+	color: #fff;
+	border: none;
+	scroll-behavior: smooth;
+	background-color: var(--background-color-buttom);
+	width: fit-content;
+}
+select {
+	border-radius: 0.5em;
+	height: 50%;
+	font-size: 20px;
+}
+select::-webkit-scrollbar {
+	display: none;
+	background-color: transparent;
+}
+button {
+	border: none;
+	border-radius: 20px;
+	background-color: var(--background-color-buttom);
+	padding: 0.4em 0.7em;
+	color: #fff;
+}
+option,
+select {
+	border-radius: 20px;
+	font-size: 1.1em;
+	padding: 4px 8px;
+}
+input[type='number'] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	border-radius: 20px;
+	width: 20px;
+}
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type='number']:focus {
+	background-color: var(--background-color-buttom-hover);
+}
+input:focus {
+	outline: none;
+}
+input,
+button {
+	border: none;
+	background-color: var(--background-color-buttom);
+	padding: 0.9em 1em;
+}
+button {
+	cursor: pointer;
+	color: #fff;
+	font-size: 1em;
+}
+input[text] {
+	color: #fff;
+	font-size: 1em;
+	width: 20vw;
+}
+button:hover {
+	background-color: var(--font-color-span);
+	color: #000000aa;
+}
+
+.search {
+	display: flex;
+	margin: 2em auto;
+
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+}
+.search input,
+button {
+	border: none;
+	background-color: var(--background-color-buttom);
+	padding: 0.9em 1em;
+}
+.search button {
+	border-top-left-radius: 3px 6px;
+	border-bottom-left-radius: 3px 6px;
+
+	color: #fff;
+	font-size: 1em;
+}
+.search button:hover {
+	color: #dedede;
+	background-color: var(--background-color-buttom-hover);
+}
+.search input {
+	border-top-right-radius: 3px 6px;
+	border-bottom-right-radius: 3px 6px;
+	color: #fff;
+	font-size: 1em;
+	width: 20vw;
+}
+.search input:focus {
+	outline: none;
+}
+
+li {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: auto;
+	padding: 7px 14px;
+	width: 30px;
+	border-radius: 20px;
+	background-color: var(--background-color-buttom);
+	width: fit-content;
+}
+ul {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	width: 400px;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-bottom: 8px;
+}
+li button {
+	border-radius: 0;
+	cursor: pointer;
+	height: fit-content;
+	border-radius: 20px;
+	padding: 0.9em;
+	color: rgb(255, 42, 42);
+	font-size: 10px;
+}
+li button:hover {
+	background-color: #ffffff00;
+	color: red;
+}
+.divNav form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	flex-direction: column;
+	width: fit-content;
+	padding: 30px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background-color: rgba(42, 42, 42, 0.466);
+}
+input {
+	color: white;
+}
+.number {
+	margin: 10px;
+	background-color: var(--background-color-buttom);
+	width: 18em;
+	padding: 7px 10px;
+	border-radius: 5px;
+}
+.text {
+	margin: 10px;
+	background-color: var(--background-color-buttom);
+	width: 18em;
+	padding: 7px 10px;
+	border-radius: 5px;
+}
+.FormDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}

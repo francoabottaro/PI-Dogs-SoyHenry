@@ -159,22 +159,21 @@ const FormPage = () => {
 			try {
 				const response = await PostDogs(form)
 				console.log('Response from server:', response)
-				navigate('/dogs')
 			} catch (error) {
 				console.error('Error sending POST request:', error)
 			}
 		})()
+		navigate('/dogs')
 	}, [submit, navigate])
 	return (
 		<>
 			<NavBar />
-			<div>
+			<div className='FormDiv'>
 				<h1>
 					From Create <span>Dog</span>
 				</h1>
 				<form onSubmit={handleSubmitTemperaments}>
-					<div>
-						<label>Name:</label>
+					<div className='text'>
 						<input
 							className='input'
 							placeholder='Dog'
@@ -183,8 +182,7 @@ const FormPage = () => {
 							onChange={handleChange}
 						/>
 					</div>
-					<div>
-						<label>Image:</label>
+					<div className='text'>
 						<input
 							className='input'
 							placeholder='Image'
@@ -195,7 +193,7 @@ const FormPage = () => {
 						/>
 					</div>
 
-					<div>
+					<div className='number'>
 						<label>Height:</label>
 						<input
 							className='input'
@@ -206,6 +204,7 @@ const FormPage = () => {
 							name='minHeight'
 							min={0}
 						/>
+						:
 						<input
 							className='input'
 							placeholder='cm'
@@ -217,8 +216,8 @@ const FormPage = () => {
 						/>
 					</div>
 
-					<div>
-						<label>Weight:</label>
+					<div className='number'>
+						<label>Weight</label>
 						<input
 							className='input'
 							placeholder='Kg'
@@ -238,8 +237,8 @@ const FormPage = () => {
 							min={0}
 						/>
 					</div>
-					<div>
-						<label>Life Span:</label>
+					<div className='number'>
+						<label>Life Span</label>
 						<input
 							className='input'
 							placeholder='YY'
@@ -249,6 +248,7 @@ const FormPage = () => {
 							name='lifemin'
 							min={0}
 						/>
+						:
 						<input
 							className='input'
 							type='number'
@@ -259,23 +259,21 @@ const FormPage = () => {
 							min={0}
 						/>
 					</div>
+
 					<div>
-						<label>Temperaments:</label>
-						<div>
-							<select
-								name='temperaments'
-								value={temperament}
-								onChange={handleTemperaments}
-							>
-								<option value=''>Select</option>
-								{temperaments.map(e => (
-									<option key={e} value={e}>
-										{e}
-									</option>
-								))}
-							</select>
-							<button type='submit'>Agregar</button>
-						</div>
+						<select
+							name='temperaments'
+							value={temperament}
+							onChange={handleTemperaments}
+						>
+							<option value=''>Select</option>
+							{temperaments.map(e => (
+								<option key={e} value={e}>
+									{e}
+								</option>
+							))}
+						</select>
+						<button type='submit'>Agregar</button>
 					</div>
 				</form>
 

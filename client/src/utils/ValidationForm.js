@@ -16,7 +16,10 @@ function submitForm(form) {
 		temperaments,
 		arrayValidateTemp
 	} = form
-
+	console.log(temperaments)
+	if (temperaments.length === 0) {
+		return false
+	}
 	if (!regex.errorNotNull.test(name)) {
 		return false
 	}

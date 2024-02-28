@@ -44,6 +44,7 @@ async function TemperamentsState() {
 }
 async function PostDogs(dogs) {
 	try {
+		console.log(dogs)
 		const { name, image, height, weight, life_span, temperaments } = dogs
 		const response = await axios.post(`${API}/dogs`, {
 			name,
@@ -51,7 +52,7 @@ async function PostDogs(dogs) {
 			height,
 			weight,
 			life_span,
-			temperaments
+			temperament: temperaments
 		})
 		console.log(`name:${name},
 			image:${image},

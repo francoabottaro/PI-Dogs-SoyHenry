@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
 const Card = ({ e }) => {
 	let idDogs = useParams()
 	idDogs = idDogs.id
@@ -18,7 +17,7 @@ const Card = ({ e }) => {
 			{id !== undefined && <h3>Height: {e.height}</h3>}
 			<h3>Weight: {e.weight}</h3>
 			{id !== undefined && <h3>Life Span: {e.life_span}</h3>}
-			<h3>Temperament: {e.temperament}</h3>
+			<h3>Temperament: {e.temperament || e.temperaments}</h3>
 		</div>
 	)
 }

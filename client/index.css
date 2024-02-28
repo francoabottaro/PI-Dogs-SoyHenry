@@ -15,6 +15,9 @@
 span {
 	color: var(--font-color-span);
 }
+img {
+	object-fit: cover;
+}
 p,
 span,
 h1,
